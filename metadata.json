@@ -1,0 +1,8 @@
+{
+  "name": "The Forwarded Seal",
+  "description": "Trust Every Document. Verify Every Forward. Full-Stack Digital Document Authentication & Forensics Platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

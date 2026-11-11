@@ -1,0 +1,52 @@
+{
+  "institutions": [
+    {
+      "id": "inst-gmu-001",
+      "name": "Grand Metropolitan University",
+      "shortCode": "GMU",
+      "emailDomain": "gmu.edu",
+      "logoUrl": "/assets/gmu-seal.svg",
+      "contactEmail": "registrar@gmu.edu",
+      "status": "active",
+      "created_at": "2026-01-01T00:00:00.000Z"
+    }
+  ],
+  "administrators": [
+    {
+      "id": "admin-001",
+      "institutionId": "inst-gmu-001",
+      "email": "admin@gmu.edu",
+      "passwordHash": "$2b$10$iQy3HTIBLPtLZZ6YyV8krOMu.k1iTjI84/lXpe/b1NiPlhcQ/wkUO",
+      "fullName": "Dr. Arthur Vance (Registrar & Controller)",
+      "role": "superadmin",
+      "active": true,
+      "created_at": "2026-11-06T06:41:38.125Z"
+    }
+  ],
+  "signing_keys": [
+    {
+      "id": "key-gmu-ed25519-01",
+      "institutionId": "inst-gmu-001",
+      "algorithm": "Ed25519",
+      "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEA1PDEswLjslhYtWf1wIhSevXhn/q06b/M0JeoiibQFKI=\n-----END PUBLIC KEY-----\n",
+      "privateKeyPem": "-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VwBCIEIB+YRrtmickwC6Zas6f/zOLifv46PT46uNKleuC6sqiE\n-----END PRIVATE KEY-----\n",
+      "fingerprint": "78646b26297bc898",
+      "status": "active",
+      "created_at": "2026-11-06T06:41:38.007Z"
+    }
+  ],
+  "documents": [],
+  "document_versions": [],
+  "signed_manifests": [],
+  "verification_records": [],
+  "audit_logs": [
+    {
+      "id": "audit-1793958382625-8foup",
+      "timestamp": "2026-11-06T09:46:22.625Z",
+      "eventType": "ADMIN_LOGIN",
+      "actorEmail": "admin@gmu.edu",
+      "details": "Admin Dr. Arthur Vance (Registrar & Controller) logged in successfully",
+      "ipAddress": "127.0.0.1"
+    }
+  ]
+}

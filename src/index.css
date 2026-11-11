@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  /* Purple Forensic Design System Palette */
+  --color-bg-primary: #090810;
+  --color-bg-secondary: #100D19;
+  --color-bg-card: #171321;
+  --color-bg-elevated: #21182F;
+  --color-primary-violet: #A66BFF;
+  --color-electric-purple: #8B5CF6;
+  --color-lavender: #D5B8FF;
+  --color-soft-white: #F7F3FF;
+  --color-muted-text: #AAA1B8;
+  --color-border-main: #302440;
+  --color-border-subtle: #241A33;
+
+  /* Status Colors */
+  --color-status-genuine: #10B981;
+  --color-status-tampered: #EF4444;
+  --color-status-unverifiable: #F59E0B;
+  --color-status-processing: #A66BFF;
+}
+
+@layer base {
+  :root {
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-sans: 'Inter', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #090810;
+    color: #F7F3FF;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+    font-feature-settings: "tnum" 1, "zero" 1;
+  }
+
+  ::selection {
+    background-color: rgba(166, 107, 255, 0.3);
+    color: #F7F3FF;
+  }
+}
+
+/* Technical Forensic Grid Background */
+.bg-grid-forensic {
+  background-image: 
+    linear-gradient(to right, rgba(166, 107, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(166, 107, 255, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.bg-grid-forensic-dense {
+  background-image: 
+    linear-gradient(to right, rgba(166, 107, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(166, 107, 255, 0.07) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Radial Violet Atmosphere Glows */
+.radial-glow-violet {
+  background: radial-gradient(circle at 50% 30%, rgba(139, 92, 246, 0.15) 0%, rgba(9, 8, 16, 0) 70%);
+}
+
+.radial-glow-spot {
+  background: radial-gradient(circle, rgba(166, 107, 255, 0.12) 0%, rgba(9, 8, 16, 0) 65%);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #100D19;
+}
+::-webkit-scrollbar-thumb {
+  background: #302440;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A66BFF;
+}
+
+/* Scanning ray animation */
+@keyframes scanline-forensic {
+  0% { transform: translateY(-10%); opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { transform: translateY(420%); opacity: 0; }
+}
+
+.animate-forensic-scan {
+  animation: scanline-forensic 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Subtle pulse */
+@keyframes subtle-glow-pulse {
+  0%, 100% { opacity: 0.8; filter: drop-shadow(0 0 8px rgba(166, 107, 255, 0.4)); }
+  50% { opacity: 1; filter: drop-shadow(0 0 16px rgba(166, 107, 255, 0.7)); }
+}
+
+.animate-glow-pulse {
+  animation: subtle-glow-pulse 3s ease-in-out infinite;
+}
